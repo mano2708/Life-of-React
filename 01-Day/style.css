@@ -1,0 +1,19 @@
+
+body {
+  display: flex;
+  gap:20px;
+  font-size: 3.5rem;
+}
+
+.inline-js button{
+  width:20vw;
+
+}
+
+.internal-js button{
+  width:20vw;
+}
+
+.external-js button{
+  width:20vw;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Day 01 | React in 30 Days</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!--
+        Inline JavaScript
+   -->
+   <div class="inline-js">
+     <button type="button" name="button" onclick='alert("welcome to React in 30 Days")'>Click Me</button>
+   </div>
+   <div class="internal-js">
+     <button type="button" name="button" onclick="internalJs()">Click Me</button>
+   </div>
+   <div class="external-js">
+     <button type="button" name="button" onclick="externalJs()">Click Me</button>
+   </div>
+   <script type="text/javascript">
+     function internalJs(){
+       alert("This is internal JavaScript");
+     }
+   </script>
+   <script src="app.js"></script>
+  </body>
+</html>
