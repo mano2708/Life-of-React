@@ -95,7 +95,7 @@ function timer1 () {
 // timer1();
 // console.log("timer starts");
 
-//  setTimeInterval() exectutes the block of code in a particular interval
+//  setTimeInterval() exectutes the block of code in a particular interval.
 
 // const interval = setInterval(() => {
 //     console.log("interval started ")
@@ -104,7 +104,7 @@ function timer1 () {
 
 // Array and Object Destructing in JavaScript
 
-// Access Array elements using loops
+// Access Array elements using loops.
 
 let names = [   "Manoj",
                 "Rasheq",
@@ -117,7 +117,7 @@ for (let name of names ){
     console.log(name);
 }
 
-// Accessing Array elements using Array Destructing
+// Accessing Array elements using Array Destructing.
 
 let [ name1 , name2 , name3 , ...otherNames ]  = names;
 
@@ -164,6 +164,13 @@ const modifiedBook = { ...book, title:"MY BOOK IS AWSOME"};
 
 console.log(modifiedBook);
 
+
+
+
+
+
+
+
 // Functional Programming in JavaScript
 
 // forEach()
@@ -171,7 +178,7 @@ console.log(modifiedBook);
 let unfilteredArray = [12,221,44,54,23,5,65];
 
 console.log("forEach function");
-unfilteredArray.forEach(forEachFunc);
+unfilteredArray.forEach(forEachFunc);   //  Takes three arguments the current element, index of the current element, and the whole array.
 
 
 function forEachFunc(item, index, arr){
@@ -181,10 +188,163 @@ function forEachFunc(item, index, arr){
 // map()
 
 console.log("Map function");
-unfilteredArray.map(mapFunc);
+unfilteredArray.map(mapFunc);       //  Takes two  arguments the current element and the index of the current element.
 
 
 function mapFunc(item , index ){
     console.log(item,index);
 }
+
+// filter()
+
+console.log("Filter Function")
+console.log(unfilteredArray.filter(filterFunc));    // Takes one argument the current element.
+
+function filterFunc(item){
+    if (item >20){
+        return item;
+    }
+}
+
+// reduce() 
+
+console.log(unfilteredArray.reduce(reduceFunc));    //  Takes two arguments the result of the previous func call and the current element.
+
+function reduceFunc(sum, current){
+    sum+=current;
+    return sum;
+}
+
+// find()
+
+console.log(unfilteredArray.find((n) => n%2 !== 0));    // Takes a single argument and return the element if the condition is true and exits the function else travrse till the end.
+
+
+// findIndex()
+
+console.log(unfilteredArray.findIndex( (n) => n%2 !== 0 ));     // Takes a single argument and return the index of the element if the condition is true and exits the function else travrse till the end.
+
+
+// some()
+
+console.log(unfilteredArray.some( (n) => n%21 === 0 ));   // Takes one argument and return true if any one of the element satisfy the condition else return false.
+
+
+// every() 
+
+console.log(unfilteredArray.every( (n) => n%2 === 0));     // Takes one argument and return true if all element satisfy the condition else return false.
+
+
+
+// Classes in JavaScript
+
+// Creating a class
+
+class JavaScriptClass{
+
+    // Constructors in JavaScript
+    constructor (name,age,address){
+        this.name= name;
+        this.age= age;
+        this.address= address;
+    }
+
+    getAge(){
+        return this.age
+    }
+    get GetAge(){
+        return this.age
+    }
+
+
+    setAge(age){
+        this.age+=age;
+    }
+
+    set SetAge(age){
+        this.age+=age;
+    }
+
+    display(...args) {
+    console.log(...args);        
+    }
+}
+
+const javascriptObj = new JavaScriptClass("Manoj",21,"Queens street, New York");
+
+console.log(javascriptObj);
+console.log("Name : \t"+javascriptObj.name);
+console.log("Age : \t"+javascriptObj.age);
+console.log(javascriptObj.display("Details : \t",`My Name is ${javascriptObj.name}`,"I am from GCEE"));
+
+console.log(javascriptObj.GetAge);
+console.log(javascriptObj.getAge());
+console.log(javascriptObj.age);
+
+console.log("Before setter")
+
+javascriptObj.SetAge = 1;
+console.log(javascriptObj.GetAge);
+console.log(javascriptObj.getAge());
+console.log(javascriptObj.age);
+console.log("After setter");
+
+javascriptObj.setAge(1);
+
+console.log(javascriptObj.GetAge);
+console.log(javascriptObj.getAge());
+console.log(javascriptObj.age);
+
+
+
+// Inheritance in JavaScript
+
+class ParentClass {
+    constructor (name, age, education){
+        this.name= name;
+        this.age= age;
+        this.education = education;
+    }
+    getGradeInfo(){
+        return `${this.name} is ${this.age} old and is studying ${this.education}`
+    }
+}
+
+class ChildClass extends ParentClass{
+    constructor(name,age,education,cgpa,...grades){
+        super(name,age,education);
+        this.grades= grades;
+        this.cgpa = cgpa;
+    }
+    getGradeInfo(){
+        console.log(super.getGradeInfo());
+        return `${this.name} has a CGPA of ${this.cgpa}%`
+    }
+
+}
+
+let childObj = new ChildClass("Manoj",21,"B.Tech IT",8.5,"A+","A","A+","B+","O");
+
+console.log(childObj.getGradeInfo());
+
+
+// Finally to the MAIN concept of JAVASCRIPT
+// Document Object Model in JavaScript.
+
+// The main purpose of Javascript is to make a webpage responsive.
+// To Make a webpage responsive we need to access the web page elements either using their id, class, or tag name.
+// JavaScript provides a set of functions to do so.
+// They are 
+//      ==>  document.getElementById("Id_name");
+//      ==>  document.getElementsByTagName("Tag_name");
+//      ==>  document.getElementsByClassName("Class_name");
+//      ==>  document.querySelector("Tag_name or Class_name");
+//      ==>  document.querySelectorAll("Tag_name pr Class_name");
+     
+
+document.getElementById("box1").textContent = "BOX1";
+
+document.getElementsByTagName("p")[2].style.backgroundColor = "#aebede";
+
+document.getElementsByClassName("box2")[0].style.display = "none" ; 
 

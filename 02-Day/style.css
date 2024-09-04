@@ -1,0 +1,27 @@
+body {
+    margin: 20px;
+    display: flex;
+    font-size: 3.2rem;
+    gap:20px;
+    background-color: hsl(0, 0%, 20%);
+}
+
+.box1 {
+    width: 400px;
+    background-color: hsl(60, 40%, 50%);
+}
+
+.box2 {
+    width: 400px;
+    background-color: hsl(120, 40%, 50%);
+}
+
+.box3 {
+    width: 400px;
+    background-color: hsl(20, 40%, 50%);
+}
+
+.box4 {
+    width: 400px;
+    background-color: hsl(160, 40%, 50%);
+}
