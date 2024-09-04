@@ -1,9 +1,10 @@
+import SidePanel from './SidePanel';
 import './App.css';
 
 function App() {
   return (
     <>
-    <p>This is a react app.</p>
+      <SidePanel />
     </>
   );
 }
