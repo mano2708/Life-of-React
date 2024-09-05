@@ -1,0 +1,95 @@
+.user-card{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    width: 94vw;
+    height: fit-content;
+    font-size: 1.5rem;
+    border-radius: 20px;
+    background-color: hsl(120, 61%, 86%);
+}
+
+.skills {
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    width: fit-content;
+    height: fit-content;
+    margin: 20px;
+    padding: 0px 5px;
+    color:white;
+    font-size: 1.35rem;
+    border-radius: 10px;
+    background-color: hsl(120, 60%, 45%);
+    transition: 0.14s ease;
+}
+
+.skill-card:hover {
+    background-color: hsl(120, 60%, 35%);
+}
+
+.skill-card p{
+    margin: 0;
+    padding: 10px;
+}
+
+.profile-pic{
+    width:150px;
+    height: auto;
+    border-radius: 75px;
+    transition: 0.14s ease;
+}
+
+.profile-pic:hover {
+    transform:scale(1.03);
+}
+
+.subcribe {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+    width: 94vw;
+    height: fit-content;
+    font-size: 1.4rem;
+    background-color: hsl(120, 61%, 86%);
+    border-radius: 20px;
+}
+
+.subcribe div input[type="text"] {
+    height: 40px;
+    margin: 20px;
+    padding: 7px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 6px;
+}
+
+.subcribe input[type="button"] {
+    width: 400px;
+    height: 40px;
+    margin: 20px;
+    padding: 7px;
+    font-size: 1.2rem;
+    border:none;
+    border-radius: 12px;
+    background-color: hsl(0, 100%, 68%);
+    transition: 0.18s ease;
+}
+
+.subcribe input[type="button"]:hover {
+    background-color: hsl(0, 100%, 60%);
+}
+
+.subcribe input[type="button"]:active {
+    background-color: hsl(0, 50%, 60%);
+}
+
+
+.abs{
+    background-color: yellow;
+}
