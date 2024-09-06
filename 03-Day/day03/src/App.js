@@ -6,9 +6,9 @@ function LastSeen () {
 
   const options = {
     year: 'numeric',
-    month: 'short', // 'numeric' will show month as a number without leading zero
-    day: '2-digit'   // 'numeric' will show day as a number without leading zero
-  };
+    month: 'short', 
+    day: '2-digit'
+};
 
   return (<>
   <div>
@@ -38,8 +38,8 @@ function SkillCard(props) {
 
   return (<>
           {props.skills.map((skill) => (
-            <div className="skill-card">
-              <p>{skill }</p>
+            <div className="skill-card" key={skill}>
+              <p>{skill}</p>
             </div>))}
   </>);
 }
