@@ -45,10 +45,12 @@ export default App */
 
 
 
-
 import React ,{useState} from "react"
+import propTypes from "prop-types"
 import "./App.css"
 
+
+/*
 import img1 from "./assets/1st.JPG"
 import img2 from "./assets/2nd.JPG"
 import img3 from "./assets/3rd.JPG"
@@ -90,16 +92,11 @@ function ImageCarsoul(){
 
 
 
-
-
-
-
 // Count Function Using States
 
-
-function App() {
+function Count(){
       const [count,setCount] = useState(0);
-
+      
       function increaseCount(){
             if (count!="Cant be Neagative"){
                   setCount(count+1);
@@ -108,7 +105,7 @@ function App() {
                   setCount(1);
             }
       }
-
+      
       const decreaseCount=()=>{
             if(count>0){
                   setCount(count-1);
@@ -117,20 +114,53 @@ function App() {
                   setCount("Cant be Neagative")
             }
       }
-
+      
       const reset=()=>{
             setCount(0);
       }
+      return (<>
+            <h1>{count}</h1>
+            <button onClick={increaseCount} className="btn">Increase Count</button>
+            <button onClick={decreaseCount} className="btn">Decrease Count</button>
+            <button onClick={reset} className="btn">Reset Count</button> 
+      </>)
+}
+
+*/
+
+function LogIn(prop){
+      let displayMsg = <h2>Login to continue</h2>
+
+      const validate = () => {
+            if (prop.login===true){
+                  displayMsg = <h2>Welcome Back {prop.name}</h2>
+            } else {
+                  displayMsg = <h2>Enter a Valid User Name</h2>
+            }}
+
+      return <>
+                  {displayMsg};
+                  <div>
+                        <input type="text" placeholder="User Name"></input><br/>
+                        <button onClick={() => validate}>Submit</button>
+                  </div>
+            </>
+}
+
+
+function App() {
 
       return (<>
-                  <h1>{count}</h1>
-                  <button onClick={increaseCount} className="btn">Increase Count</button>
-                  <button onClick={decreaseCount} className="btn">Decrease Count</button>
-                  <button onClick={reset} className="btn">Reset Count</button>
-                  <ImageCarsoul/>
+                  {/* <Count/> */}
+                  {/* <ImageCarsoul/> */}
+                  <LogIn />
             </>)
 }
 
+LogIn.propTypes={
+      name:propTypes.string,
+      login:propTypes.bool
+}
 
 
 export default App;
