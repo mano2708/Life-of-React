@@ -1,0 +1,57 @@
+.loginForm {
+      color: hsl(43, 74%, 10%);
+      font-size: 2.1rem;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin: auto;
+      height: 60vh;
+      width: 40vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      border-radius: 10px;
+      background-color: hsl(43, 74%, 35%);
+}
+
+.loginForm input {
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin-top: 12px;
+      padding: 9px;
+      width: 35vh;
+      height: 3vh;
+      outline: none;
+      border:none;
+      border-radius: 7px;
+      background-color: hsl(43, 74%, 80%);
+}
+
+.loginForm p {
+      font-size: 0.9rem;
+      text-align: left;
+      margin: 0;
+      left:0;
+      margin-top: 2px;
+      color:hsl(0, 100%, 35%);
+}
+
+.loginForm button {
+      font-size: 1.3rem;
+      font-weight: bold;
+      font-size: 1.3rem;
+      font-weight: bold;
+      margin: 20px;
+      width:20vh;
+      height: 4vh;
+      background-color: hsl(43, 74%, 50%);
+      outline: none;
+      border:none;
+      border-radius: 12px;
+
+}
+
+.loginForm button:active {
+      color: hsl(43, 74%, 80%);
+      background-color: hsl(43, 74%, 10%);
+}
