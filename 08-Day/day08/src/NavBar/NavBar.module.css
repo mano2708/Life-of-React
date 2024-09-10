@@ -1,0 +1,148 @@
+/* HEADER STYLING */
+
+header {
+      margin: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      width:  100vw;
+      height: 15vh;
+      color:rgb(27, 13, 9);
+      background-color: rgba(76, 168, 233, 0.726);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+}
+
+.profileContainer {
+      display:flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.profilePic{
+      width:90px;
+      margin: 20px;
+      border-radius: 40px;
+}
+
+.mainNav {
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap:10px;
+}
+
+.mainNav ul {
+      display: flex;
+      justify-content: right;
+      align-items: center;
+}
+
+.mainNav ul li{
+      list-style: none;
+      margin:10px;
+      animation-timing-function: cubic-bezier(0.3, 0.7, 0.58, -0.01);
+      animation-duration: 0.3s;
+      text-decoration: none;
+      font-size: 1.5em;
+      color:rgb(27, 13, 9);
+}
+
+.mainNav ul a{
+      text-decoration: none;
+}
+
+.mainNav svg{
+      font-size: 1.7em;
+}
+
+.mainNav ul a:hover , 
+svg:hover , 
+.mainNav ul li:hover {
+      transition: 0.2s ease-out;
+      scale: 1.03;
+      color:rgb(27, 13, 9);
+}
+
+.menuBtn {
+      display:none;
+}
+
+.dropDownMenuDisabled {
+      display: none;
+}
+
+.dropDownMenu {
+      background-color:rgba(76, 168, 233, 0.726);
+      backdrop-filter: blur(9px);
+      width: 300px;
+      height: auto;
+      display: flex;
+      position: absolute;
+      right: 2rem;
+      top:16vh;
+      flex-direction: column;
+      justify-content: center;
+      border-radius: 1.2rem;
+      box-shadow: 0px 0px 4px hsl(43, 74%, 25%);
+}
+
+.dropDownMenu a {
+      text-decoration: none;
+}
+
+.dropDownMenu li {
+      margin-top: 12px;
+      height: 6vh;
+      list-style: none;
+      font-size: 1.5em;
+      align-items: center;
+      text-align: center;
+      transition: scale 1.2 ease;
+}
+
+.dropDownMenu li:hover {
+      scale: 1.2;
+}
+
+.dropDownMenu li {
+      text-decoration: none;
+      color:rgb(27, 13, 9);
+}
+
+.dropDownMenu li a:hover {
+      scale: 1.2;
+      color:rgb(27, 13, 9);
+      transition: cubic-bezier(0.19, 1, 0.22, 1);
+}
+  
+
+/* Responsive */
+
+@media (max-width:990px){
+    
+      .mainNav ul {
+          display: none;
+      }
+      .menuBtn {
+          display: block;
+          padding: 10px;
+      }
+  
+      .profilePic {
+          width: 70px;
+      }
+  
+      .dropDownMenuEnabled {
+          display: block;
+      }
+}
+  
+@media (max-width:400px){
+      .portfolio {
+          display: none;
+      }
+}
