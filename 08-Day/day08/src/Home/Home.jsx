@@ -1,9 +1,11 @@
+import { HomeContent } from "./HomeContent";
+
 import "./Home.css"
 
 function Home(){
       return (<>
       <div className="mainDiv">
-      <p>this is a p  tag</p>
+            <HomeContent/>
       </div>
       </>);
 }
