@@ -37,14 +37,14 @@ function App() {
 
       const handleClick = () => {
 
-            console.log(Response.current);
+            console.log(Response);
 
             setWeatherResponse({
-                  currWeather:Response.current.condition.text,
-                  currWeatherIcon:Response.current.condition.icon,
-                  currCity:Response.location.name,
-                  currTempCel:Response.current.temp_c,
-                  currTempFar:Response.current.temp_f,
+                  currWeather : Response.current.condition.text,
+                  currWeatherIcon : Response.current.condition.icon,
+                  currCity : city.current.value,
+                  currTempCel : Response.current.temp_c,
+                  currTempFar : Response.current.temp_f,
             });
             console.log("City",city.current.value);
 
