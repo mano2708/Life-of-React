@@ -65,6 +65,7 @@ Currently, two official plugins are available:
          }
 
    Finally surround the main component within the Provider componen like 
+   
          ReactDOM.render(<Sample>
          <App />
          </Sample>)
